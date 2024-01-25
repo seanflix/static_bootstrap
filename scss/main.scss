@@ -22,8 +22,6 @@ $aspect-ratios: (
   "21x9": calc(9 / 21 * 100%)
 );
 
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
-
 .justify {
     text-align: justify;
     text-justify: inter-word;
