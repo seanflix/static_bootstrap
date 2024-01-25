@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$font-family-base: 'Barlow Semi Condensed', sans-serif;
+$enable-negative-margins: true;
+
+$primary: #005A8A;
+$warning: #FFD800;
+$danger: #D21F3C;
+$info: #008CD6;
+$success: #36803D;
+$dark: #808080;
+
+$aspect-ratios: (
+  "1x1": 100%,
+  "4x3": calc(3 / 4 * 100%),
+  "16x9": calc(9 / 16 * 100%),
+  "9x16": calc(16 / 9 * 100%),
+  "21x9": calc(9 / 21 * 100%)
+);
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+.justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.vr {
+    background-color: $warning;
+    width: 2px;
+    opacity: 100%;
+}
+
+button:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    --bs-focus-ring-color: transparent;
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus-lg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2'/%3E%3C/svg%3E");
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash-lg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8'/%3E%3C/svg%3E");
+}
+
+.bg-lightblue {
+    background: #D8E6F3;
+    @include media-breakpoint-up(lg) {
+        background: white;
+    }
+}
+
+.ratio-16x9 {
+    @media (min-width: 0px) {
+        --bs-aspect-ratio: 160%;
+    }
+    @include media-breakpoint-up(md) {
+        --bs-aspect-ratio: 56.25%;
+    }
+}
+
+.condensed {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.poppins {
+    font-family: 'Poppins';
+}
+
+.payment-methods {
+    height: 30px;
+    @include media-breakpoint-up(sm) {
+        height: 40px;
+    }
+}
+
+.trustpilot {
+    height: 18px;
+    @include media-breakpoint-up(md) {
+        height: 35px;
+    }
+}
+
+.trustpilot-desc {
+    font-size: 18px;
+    @include media-breakpoint-up(md) {
+        font-size: 24px;
+    }
+}
+
+.hero-white-shadow {
+    text-shadow: 0px 0px 30px white;
+}
+
+.bottle-img {
+    height: 90px;
+    @include media-breakpoint-up(sm) {
+        height: 130px;
+    }
+    @include media-breakpoint-up(lg) {
+        height: 100%;
+    }
+}
+
+.pointer-hand {
+    width: 45px;
+    right: 25px;
+    bottom: -15px;
+    @include media-breakpoint-up(sm) {
+        right: -10px;
+        bottom: -10px;
+    }
+    @include media-breakpoint-up(md) {
+        right: -20px;
+        bottom: -10px;
+    }
+}
+
+.bottle-header {
+    font-size: 50px;
+    @include media-breakpoint-up(sm) {
+        font-size: 60px;
+    }
+}
+
+.bottle-subheader {
+    font-size: 30px;
+    font-weight: 400;
+    @include media-breakpoint-up(lg) {
+        font-size: 25px;
+        font-weight: 600;
+    }
+}
+
+.per-bottle {
+    font-weight: 500;
+    font-size: 23px;
+    @include media-breakpoint-up(md) {
+        font-weight: 700;
+        font-size: 28px;
+    }
+}
+
+.cart-price {
+    font-size: 60px;
+    @include media-breakpoint-up(md) {
+        font-size: 90px;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 105px;
+    }
+}
+
+.white-shadow {
+    -webkit-filter: drop-shadow(0px 0px 60px white);
+    filter: drop-shadow(0px 0px 60px white);
+}
+
+.white-shadow2 {
+    -webkit-filter: drop-shadow(0px 0px 70px white);
+    filter: drop-shadow(0px 0px 70px white);
+}
+
+.guarantee-logo {
+    height: 70px;
+    @include media-breakpoint-up(sm) {
+        height: 100px;
+    }
+    @include media-breakpoint-up(lg) {
+        height: 140px;
+    }
+}
+
+.digital-1 {
+    height: 600px;
+    background-image: linear-gradient(to top, white 0%, transparent 25%), url('/images/digital1.png');
+    @include media-breakpoint-up(xl) {
+        background-image: linear-gradient(to right, white 0%, transparent 25%), url('/images/digital1.png');
+    }
+    background-size: cover;
+    background-position: center;
+}
+
+.digital-2 {
+    height: 460px;
+    background-image: linear-gradient(to top, white 0%, transparent 25%), url('/images/digital2.png');
+    @include media-breakpoint-up(xl) {
+        background-image: linear-gradient(to right, white 0%, transparent 25%), url('/images/digital2.png');
+    }
+    background-size: cover;
+    background-position: right;
+}
+
+.shipping2 {
+    height: 55px;
+}
+
+.result-image1 {
+    width: 180px;
+    margin-right: -20px;
+    @include media-breakpoint-up(sm) {
+        width: 250px;
+        margin: 0px;
+    }
+    @include media-breakpoint-up(lg) {
+        width: 350px;
+        margin: 0px;
+    }
+}
+.result-image2 {
+    width: 180px;
+    margin-left: -20px;
+    @include media-breakpoint-up(sm) {
+        width: 250px;
+        margin: 0px;
+    }
+    @include media-breakpoint-up(lg) {
+        width: 350px;
+        margin: 0px;
+    }
+}
+.result-image3 {
+    width: 180px;
+    margin-right: -20px;
+    margin-top: -30px;
+    transform: rotate(12deg);
+    @include media-breakpoint-up(sm) {
+        width: 250px;
+        margin: 0px;
+    }
+    @include media-breakpoint-up(md) {
+        width: 250px;
+        margin: 0px;
+        transform: rotate(0deg);
+    }
+    @include media-breakpoint-up(lg) {
+        width: 350px;
+        margin: 0px;
+    }
+}
+.result-image4 {
+    width: 180px;
+    margin-left: -20px;
+    margin-top: -36px;
+    transform: rotate(-12deg);
+    @include media-breakpoint-up(sm) {
+        width: 250px;
+        margin: 0px;
+    }
+    @include media-breakpoint-up(md) {
+        width: 250px;
+        margin: 0px;
+        transform: rotate(0deg);
+    }
+    @include media-breakpoint-up(lg) {
+        width: 350px;
+        margin: 0px;
+    }
+}
+
+.red-line {
+    background: $danger;
+    width: 100%;
+    height: 3px;
+    top: 50%;
+    left: 0px;
+    right: 0px;
+    translate: -2px 0px;
+    transform: rotate(-15deg);
+}
+
+.bg-hero {
+    width: 100vh;
+}
+
+.bg-hero-2 {
+    height: 400px;
+    width: 100%;
+}
+
+.bg-gradient-info {
+    width: 100%;
+    background: linear-gradient($info 0%, $info 50%, white 100%);
+    height: 100%;
+    @include media-breakpoint-up(sm) {
+        background: linear-gradient($info 0%, $info 40%, white 100%);
+        height: 1000px;
+    }
+}
+
+.stars {
+    height: 18px;
+}
+
+.testimonial-thumb {
+    height: 80px;
+}
+
+.quote {
+    height: 18px;
+}
+
+h1 {
+    @include media-breakpoint-up(sm) {
+        font-size: 40px;
+    }
+    @include media-breakpoint-up(md) {
+        font-size: 50px;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 60px;
+    }
+}
+
+.bg-gradient-primary {
+    translate: 0px -100%;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, $primary);
+    @include media-breakpoint-up(md) {
+        height: 200px;
+        translate: 0px -100%;
+    }
+}
+
+.btn-cart {
+    background: linear-gradient(#008CD6, #005A8A);
+    border: none;
+    color: white;
+    width: 100%;
+    @include media-breakpoint-up(md) {
+        width: fit-content;
+    }
+}
+
+.faq-bg {
+    background: linear-gradient(-45deg, #008CD6, #005A8A);
+    padding-bottom: 400px !important;
+}
+
+.cta-section {
+    margin-top: -400px;
+}
+
+.modal-bottle {
+    width: 200px;
+}
+
+.dashed {
+    border-style: dashed;
+    border-width: 2px;
+}
+
+.tracking-wide {
+    letter-spacing: 4px;
+}
+
+.promo-button {
+    background: linear-gradient(#D21F3C, #A4182F);
+}
