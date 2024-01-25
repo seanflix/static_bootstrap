@@ -180,9 +180,9 @@ button:focus:not(:focus-visible) {
 
 .digital-1 {
     height: 600px;
-    background-image: linear-gradient(to top, white 0%, transparent 25%), url('images/digital1.png');
+    background-image: linear-gradient(to top, white 0%, transparent 25%), url('../images/digital1.png');
     @include media-breakpoint-up(xl) {
-        background-image: linear-gradient(to right, white 0%, transparent 25%), url('images/digital1.png');
+        background-image: linear-gradient(to right, white 0%, transparent 25%), url('../images/digital1.png');
     }
     background-size: cover;
     background-position: center;
@@ -190,9 +190,9 @@ button:focus:not(:focus-visible) {
 
 .digital-2 {
     height: 460px;
-    background-image: linear-gradient(to top, white 0%, transparent 25%), url('images/digital2.png');
+    background-image: linear-gradient(to top, white 0%, transparent 25%), url('../images/digital2.png');
     @include media-breakpoint-up(xl) {
-        background-image: linear-gradient(to right, white 0%, transparent 25%), url('images/digital2.png');
+        background-image: linear-gradient(to right, white 0%, transparent 25%), url('../images/digital2.png');
     }
     background-size: cover;
     background-position: right;
